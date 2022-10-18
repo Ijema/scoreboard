@@ -11,6 +11,8 @@ body {
     background-color: var(--background-color);
     height:320px;
     width: 500px;
+    margin: auto;
+    margin-top: 150px;
     text-transform: uppercase;
     font-family: Tahoma;
     color: var(--color1);
