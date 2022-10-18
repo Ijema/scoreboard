@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Scoreboard</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+    <body>
+        <div class="body">
+            <div class="timeDisplay">
+                <p id="timeDisplay"></p>
+            </div>
+            <div class="container">
+            <div class="home">
+                <h2>Home</h2>
+                <div class="number_display">
+                    <p class="show_number" id="show_number_home">0</p>
+                </div>
+                <button type="button" id="add-one" onclick="AddOneHome()"> +1</button>
+                <button type="button" id="add-two" onclick="AddTwoHome()"> +2</button>
+                <button type="button" id="add-three" onclick="AddThreeHome()"> +3</button>
+            </div>
+            <div class="guest">
+                <h2>Guest</h2>
+                <div class="number_display">
+                    <p class="show_number" id="show_number_guest">0</p>
+                </div>
+                <button type="button" id="add-one" onclick="AddOneGuest()"> +1</button>
+                <button type="button" id="add-two" onclick="AddTwoGuest()"> +2</button>
+                <button type="button" id="add-three" onclick="AddThreeGuest()"> +3</button>
+                <div class="startbtn_resetbtn">
+                    <button type="button" class="reset" id="reset" onclick="Reset()">Reset</button>
+                    <button type="button" class="start" id="clock" onclick="TimerCountDown()">Start</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
+
+<script src="index.js"></script>
+
