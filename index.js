@@ -4,8 +4,9 @@ let numberGuest = document.getElementById("show_number_guest");
 let countHome = 0;
 let countGuest = 0;
 
-var minutes = 0;
-var seconds = 0;
+let minutes = 0;
+let seconds = 0;
+let timer_on = 0;
 
 
 function AddOneHome() {
@@ -118,13 +119,14 @@ function Reset() {
     }
    
 }
-function TimerCountDown(duration, display) {
-    
-    var interval = setInterval(function() {
-        seconds++;
-        document.getElementById("timeDisplay").innerText = minutes + ":" + seconds; 
-        
+// sets the timers count intervals
 
+// function to start counter
+function TimerCountDown() {
+        document.getElementById("timeDisplay").innerText = minutes + ":" + seconds; 
+        seconds++;
+        timeout = setTimeout(TimerCountDown, 1000);
+        
      if (seconds == 60){
          minutes++;
          seconds = 0;
@@ -142,7 +144,16 @@ function TimerCountDown(duration, display) {
         clearInterval(interval);
         //break breakme;
     }        
-     
-    }, 1000);
- }
- 
+}
+// function to start counting
+function Start() {
+    if(!timer_on){
+        timer_on = 1;
+        TimerCountDown();
+    }
+}
+//  Function that stops the timer
+function Stop(){
+    clearTimeout(timeout);
+    timer_on = 0;
+}
